@@ -1,5 +1,7 @@
 package tech.angeofdiasg.pessoas;
 
+import tech.angeofdiasg.composicao.Endereco;
+
 public class Funcionario extends Pessoa{
 	private int matricula;
 	private String cargo;
@@ -9,7 +11,7 @@ public class Funcionario extends Pessoa{
 	public void cadastrar(int matricula, String cargo,
 			double salario, String dataAdmissao,
 			String nome, String dataNascimento, 
-			String endereco,String telsContato) {
+			Endereco endereco,String telsContato) {
 		this.matricula = matricula;
 		this.cargo = cargo;
 		this.salario = salario;

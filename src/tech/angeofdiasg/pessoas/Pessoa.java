@@ -1,13 +1,15 @@
 package tech.angeofdiasg.pessoas;
 
+import tech.angeofdiasg.composicao.Endereco;
+
 public class Pessoa {
 	private String nome;
 	private String dataNascimento;
-	private String endereco;
+	private Endereco endereco;
 	private String telsContato;
 	
 	public void cadastrar(String nome, String dataNascimento, 
-			String endereco,String telsContato) {
+			Endereco endereco,String telsContato) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.endereco = endereco;
@@ -31,10 +33,10 @@ public class Pessoa {
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-	public String getEndereco() {
+	public Endereco getEndereco() {
 		return endereco;
 	}
-	public void setEndereco(String endereco) {
+	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
 	public String getTelsContato() {
