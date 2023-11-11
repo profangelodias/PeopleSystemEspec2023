@@ -24,7 +24,7 @@ public class ListaDeTelefonesNaoOrdenados {
 		//length ele pega a capacidade atual em tempo de execução,
 		//Caso a CAPACIDADE_PADRAO seja alterada.
 		if (tamanho < telefones.length) {
-			telefones[indexTel++] = telefone;
+			telefones[tamanho++] = telefone;
 			indexTel = indexTel + 1;
 			this.tamanho = tamanho + 1;
 		}
