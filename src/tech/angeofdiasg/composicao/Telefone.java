@@ -24,7 +24,5 @@ public class Telefone {
 	public String toString() {
 		return "("+ ddd +") " + telefone;
 	}
-
-	
 	
 }

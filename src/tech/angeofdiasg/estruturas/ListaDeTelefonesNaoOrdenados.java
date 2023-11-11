@@ -21,11 +21,13 @@ public class ListaDeTelefonesNaoOrdenados {
 	}
 	
 	public void addTelefone(Telefone telefone) {
-		
-		
-		telefones[indexTel++] = telefone;
-		indexTel = indexTel + 1;
-		this.tamanho = tamanho + 1;
+		//length ele pega a capacidade atual em tempo de execução,
+		//Caso a CAPACIDADE_PADRAO seja alterada.
+		if (tamanho < telefones.length) {
+			telefones[indexTel++] = telefone;
+			indexTel = indexTel + 1;
+			this.tamanho = tamanho + 1;
+		}
 	}
 	
 	public void removerTelefone(Telefone telefone) {
@@ -36,6 +38,7 @@ public class ListaDeTelefonesNaoOrdenados {
 		}
 		telefones[--tamanho] = null;
 	}
+	}
 	
 	private int  buscarTelefoneIndex(Telefone telefone) {
 		for(int i = 0; i < tamanho; i++) {
@@ -45,6 +48,13 @@ public class ListaDeTelefonesNaoOrdenados {
 		}
 		return -1;
 	}
+	
+	public void exibirTelefones() {
+		for(int i = 0; i < tamanho; i++) {
+			System.out.println(telefones[i]);
+		}
+	}
+	
 	
 	
 	
