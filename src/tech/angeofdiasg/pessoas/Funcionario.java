@@ -1,5 +1,7 @@
 package tech.angeofdiasg.pessoas;
 
+import java.time.LocalDate;
+
 import tech.angeofdiasg.composicao.Endereco;
 
 public class Funcionario extends Pessoa{
@@ -10,16 +12,13 @@ public class Funcionario extends Pessoa{
 	
 	public void cadastrar(int matricula, String cargo,
 			double salario, String dataAdmissao,
-			String nome, String dataNascimento, 
+			String nome, LocalDate dataNascimento, 
 			Endereco endereco,String telsContato) {
 		this.matricula = matricula;
 		this.cargo = cargo;
 		this.salario = salario;
 		this.dataAdmissao = dataAdmissao;
-		setNome(nome);
-		setDataNascimento(dataNascimento);
-		setEndereco(endereco);
-		setTelsContato(telsContato);
+		cadastrar(nome, dataNascimento, endereco, telsContato);
 	}
 	
 	public void reajutarSalario(double percentual) {

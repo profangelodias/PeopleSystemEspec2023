@@ -1,5 +1,7 @@
 package tech.angeofdiasg.pessoas;
 
+import java.time.LocalDate;
+
 import tech.angeofdiasg.composicao.Endereco;
 
 public class Cliente extends Pessoa{
@@ -7,14 +9,11 @@ public class Cliente extends Pessoa{
 	private String Profissao;
 	
 	public void cadastrar(String codigo, String profissao, 
-			String nome, String dataNascimento, 
+			String nome, LocalDate dataNascimento, 
 			Endereco endereco,String telsContato) {
 		this.codigo = codigo;
 		this.Profissao = profissao;
-		setNome(nome);
-		setDataNascimento(dataNascimento);
-		setEndereco(endereco);
-		setTelsContato(telsContato);
+		cadastrar(nome, dataNascimento, endereco, telsContato);
 	}
 	
 	public String getCodigo() {
