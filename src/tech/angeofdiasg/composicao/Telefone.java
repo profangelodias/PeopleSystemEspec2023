@@ -20,7 +20,10 @@ public class Telefone {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+	
+	
 	@Override
+	// O toString é executado de forma automática ao tentar imprimir o objeto (que está sendo feito no exibirTelefones na lista) 
 	public String toString() {
 		return "("+ ddd +") " + telefone;
 	}

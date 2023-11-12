@@ -35,9 +35,9 @@ public class AplicacaoMain {
         Telefone telefone2 = new Telefone("22", "9876-5432");
         Telefone telefone3 = new Telefone("33", "5555-1234");
 		
-		minhaLista.addTelefone(telefone1);
-        minhaLista.addTelefone(telefone2);
-        minhaLista.addTelefone(telefone3);
+//		minhaLista.addTelefone(telefone1);
+//        minhaLista.addTelefone(telefone2);
+//        minhaLista.addTelefone(telefone3);
 
         System.out.println("Telefones antes da remoção:");
         minhaLista.exibirTelefones();
