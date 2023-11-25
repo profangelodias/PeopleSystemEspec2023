@@ -24,7 +24,7 @@ public class AplicacaoMain {
 //				objEndCli01, "9191981981981981");
 //		
 //		
-//		objNovoCli01.getNome();
+//		objNovo	Cli01.getNome();
 //		objNovoCli01.getCodigo();
 //		objNovoCli01.getEndereco().getCep();
 //		objNovoCli01.obterIdade();
@@ -35,9 +35,12 @@ public class AplicacaoMain {
         Telefone telefone2 = new Telefone("22", "9876-5432");
         Telefone telefone3 = new Telefone("33", "5555-1234");
 		
-//		minhaLista.addTelefone(telefone1);
-//        minhaLista.addTelefone(telefone2);
-//        minhaLista.addTelefone(telefone3);
+		minhaLista.addTelefoneNoSQL(telefone1);
+        minhaLista.addTelefoneNoSQL(telefone2);
+        minhaLista.addTelefoneNoSQL(telefone3);
+		minhaLista.addTelefoneNoSQL(telefone1);
+        minhaLista.addTelefoneNoSQL(telefone2);
+        minhaLista.addTelefoneNoSQL(telefone3);
 
         System.out.println("Telefones antes da remoção:");
         minhaLista.exibirTelefones();

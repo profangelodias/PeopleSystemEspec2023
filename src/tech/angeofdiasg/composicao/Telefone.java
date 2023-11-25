@@ -23,7 +23,9 @@ public class Telefone {
 	
 	
 	@Override
-	// O toString é executado de forma automática ao tentar imprimir o objeto (que está sendo feito no exibirTelefones na lista) 
+	// O toString é executado de forma automática
+	//ao tentar imprimir o objeto 
+	//(que está sendo feito no exibirTelefones na lista) 
 	public String toString() {
 		return "("+ ddd +") " + telefone;
 	}
