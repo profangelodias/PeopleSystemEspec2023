@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
 
+import tech.angelofdiasg.estruturas.ListaDeTelefonesNaoOrdenados;
 import tech.angeofdiasg.composicao.Endereco;
 import tech.angeofdiasg.composicao.Telefone;
 
@@ -11,14 +12,14 @@ public class Pessoa {
 	private String nome;
 	private LocalDate dataNascimento;
 	private Endereco endereco;
-	private String telsContato;
+	private ListaDeTelefonesNaoOrdenados listaTelsContato;
 	
 	public void cadastrar(String nome, LocalDate dataNascimento, 
-			Endereco endereco,String telsContato) {
+			Endereco endereco,ListaDeTelefonesNaoOrdenados listaTelsContato) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.endereco = endereco;
-		this.telsContato = telsContato;
+		this.listaTelsContato = listaTelsContato;
 	}
 	
 	public int obterIdade() {
@@ -46,11 +47,11 @@ public class Pessoa {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	public String getTelsContato() {
-		return telsContato;
+	public ListaDeTelefonesNaoOrdenados getTelsContato() {
+		return listaTelsContato;
 	}
-	public void setTelsContato(String telsContato) {
-		this.telsContato = telsContato;
+	public void setTelsContato(ListaDeTelefonesNaoOrdenados telsContato) {
+		this.listaTelsContato = telsContato;
 	}
 	
 	

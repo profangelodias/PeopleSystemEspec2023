@@ -1,4 +1,4 @@
-package tech.angeofdiasg.estruturas;
+package tech.angelofdiasg.estruturas;
 
 import java.util.Iterator;
 
@@ -52,10 +52,10 @@ public class ListaDeTelefonesNaoOrdenados {
 			telefones[tamanho] = telefone;
 			//incremento do tamanho
 			this.tamanho = tamanho + 1;
+		} else {
+			System.out.println("Não há mais espaço para adicionar o " + telefone);
 		}
 	}
-	
-
 	
 	//remover o telefone precisa buscar o index
 	public void removerTelefone(Telefone telefone) {

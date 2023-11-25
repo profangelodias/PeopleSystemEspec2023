@@ -2,6 +2,7 @@ package tech.angeofdiasg.pessoas;
 
 import java.time.LocalDate;
 
+import tech.angelofdiasg.estruturas.ListaDeTelefonesNaoOrdenados;
 import tech.angeofdiasg.composicao.Endereco;
 
 public class Funcionario extends Pessoa{
@@ -13,12 +14,12 @@ public class Funcionario extends Pessoa{
 	public void cadastrar(int matricula, String cargo,
 			double salario, LocalDate dataAdmissao,
 			String nome, LocalDate dataNascimento, 
-			Endereco endereco,String telsContato) {
+			Endereco endereco,ListaDeTelefonesNaoOrdenados listaTelsContato) {
 		this.matricula = matricula;
 		this.cargo = cargo;
 		this.salario = salario;
 		this.dataAdmissao = dataAdmissao;
-		cadastrar(nome, dataNascimento, endereco, telsContato);
+		cadastrar(nome, dataNascimento, endereco, listaTelsContato);
 	}
 	
 	public void reajutarSalario(double percentual) {
