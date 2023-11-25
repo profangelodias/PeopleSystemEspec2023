@@ -23,6 +23,26 @@ public class ListaDeTelefonesNaoOrdenados {
 		return this.tamanho == 0;
 	}
 	
+	private void garantirCapacidade() {
+			int novaCapacidade = telefones.length * 2;
+			Telefone[] listaTelefones = new Telefone[novaCapacidade];
+			for(int i = 1; i < tamanho; i++) {
+				listaTelefones[i] = telefones[i];
+			}
+			telefones = listaTelefones;
+	}
+	//Adicionar um telefone VIDA LOKA
+	public void addTelefoneNoSQL(Telefone telefone) {
+		//length ele pega a capacidade atual em tempo de execução,
+		//Caso a CAPACIDADE_PADRAO seja alterada.
+		if (tamanho == telefones.length) {
+			//Se o veotr estiver cheio, aumente sua capacidade
+			garantirCapacidade();
+		}
+		telefones[tamanho] = telefone;
+		this.tamanho = tamanho +1;
+	}
+	
 	//Adicionar um telefone
 	public void addTelefone(Telefone telefone) {
 		//length ele pega a capacidade atual em tempo de execução,
@@ -34,6 +54,8 @@ public class ListaDeTelefonesNaoOrdenados {
 			this.tamanho = tamanho + 1;
 		}
 	}
+	
+
 	
 	//remover o telefone precisa buscar o index
 	public void removerTelefone(Telefone telefone) {
